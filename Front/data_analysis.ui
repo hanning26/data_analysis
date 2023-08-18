@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>13</y>
+      <width>639</width>
+      <height>470</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLabel" name="factory_label">
+           <property name="text">
+            <string>厂家</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="product_label">
+           <property name="text">
+            <string>产品名称</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QLineEdit" name="factory_lineEdit"/>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="product_lineEdit"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QLabel" name="chip_label">
+           <property name="text">
+            <string>芯片名称</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="stamp_label">
+           <property name="text">
+            <string>印章/批号</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QLineEdit" name="chip_lineEdit"/>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="stamp_lineEdit"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPushButton" name="search_pushButton">
+           <property name="text">
+            <string>搜索</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="analyse_pushButton">
+           <property name="text">
+            <string>分析</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="derive_pushButton">
+           <property name="text">
+            <string>导出</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item row="1" column="0">
+      <widget class="QTextBrowser" name="show_textBrowser"/>
+     </item>
+     <item row="2" column="0">
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>18</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="3" column="0">
+      <widget class="QTextBrowser" name="error_textBrowser">
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>640</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="file_menu">
+    <property name="title">
+     <string>文件(F)</string>
+    </property>
+    <addaction name="open_action"/>
+    <addaction name="quit_action"/>
+   </widget>
+   <widget class="QMenu" name="analyse_menu">
+    <property name="title">
+     <string>分析(F)</string>
+    </property>
+    <widget class="QMenu" name="chart_menu">
+     <property name="title">
+      <string>图表</string>
+     </property>
+     <addaction name="normal_distribution_action"/>
+     <addaction name="scatter_action"/>
+     <addaction name="boxplot_action"/>
+     <addaction name="bar_action"/>
+     <addaction name="scatter_matrix_action"/>
+    </widget>
+    <addaction name="chart_menu"/>
+    <addaction name="func_action"/>
+    <addaction name="report_action"/>
+   </widget>
+   <widget class="QMenu" name="search_menu">
+    <property name="title">
+     <string>搜索(S)</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="tool_menu">
+    <property name="title">
+     <string>工具(T)</string>
+    </property>
+    <addaction name="data_format_conver_action"/>
+    <addaction name="data_consolidation_action"/>
+    <addaction name="lot_action"/>
+   </widget>
+   <widget class="QMenu" name="auto_menu">
+    <property name="title">
+     <string>自动化(A)</string>
+    </property>
+    <addaction name="start_action"/>
+    <addaction name="cut_action"/>
+   </widget>
+   <widget class="QMenu" name="help_menu">
+    <property name="title">
+     <string>帮助(H)</string>
+    </property>
+    <addaction name="operation_guide_action"/>
+   </widget>
+   <addaction name="file_menu"/>
+   <addaction name="auto_menu"/>
+   <addaction name="analyse_menu"/>
+   <addaction name="search_menu"/>
+   <addaction name="tool_menu"/>
+   <addaction name="help_menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="open_action">
+   <property name="text">
+    <string>打开(O)</string>
+   </property>
+  </action>
+  <action name="quit_action">
+   <property name="text">
+    <string>退出(Q)</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>明镓</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>升谱</string>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="text">
+    <string>集佳</string>
+   </property>
+  </action>
+  <action name="action_5">
+   <property name="text">
+    <string>卢米斯</string>
+   </property>
+  </action>
+  <action name="action_6">
+   <property name="text">
+    <string>佑明</string>
+   </property>
+  </action>
+  <action name="mingjia_action">
+   <property name="text">
+    <string>明镓</string>
+   </property>
+  </action>
+  <action name="shengpu_action">
+   <property name="text">
+    <string>升谱</string>
+   </property>
+  </action>
+  <action name="action_10">
+   <property name="text">
+    <string>集佳</string>
+   </property>
+  </action>
+  <action name="action_11">
+   <property name="text">
+    <string>卢米斯</string>
+   </property>
+  </action>
+  <action name="action_12">
+   <property name="text">
+    <string>佑明</string>
+   </property>
+  </action>
+  <action name="normal_distribution_action">
+   <property name="text">
+    <string>正态分布图</string>
+   </property>
+  </action>
+  <action name="scatter_action">
+   <property name="text">
+    <string>散点图</string>
+   </property>
+  </action>
+  <action name="boxplot_action">
+   <property name="text">
+    <string>箱线图</string>
+   </property>
+  </action>
+  <action name="bar_action">
+   <property name="text">
+    <string>柱状图</string>
+   </property>
+  </action>
+  <action name="scatter_matrix_action">
+   <property name="text">
+    <string>散点图矩阵</string>
+   </property>
+  </action>
+  <action name="func_action">
+   <property name="text">
+    <string>生成函数</string>
+   </property>
+  </action>
+  <action name="report_action">
+   <property name="text">
+    <string>生成报告</string>
+   </property>
+  </action>
+  <action name="start_action">
+   <property name="text">
+    <string>开始</string>
+   </property>
+  </action>
+  <action name="cut_action">
+   <property name="text">
+    <string>终止</string>
+   </property>
+  </action>
+  <action name="operation_guide_action">
+   <property name="text">
+    <string>操作指南</string>
+   </property>
+  </action>
+  <action name="lot_action">
+   <property name="text">
+    <string>芯片批号-成品批号关系对应</string>
+   </property>
+  </action>
+  <action name="data_consolidation_action">
+   <property name="text">
+    <string>数据合并(FT+RT)</string>
+   </property>
+  </action>
+  <action name="data_format_conver_action">
+   <property name="text">
+    <string>数据格式转换</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
